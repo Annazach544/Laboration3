@@ -1,0 +1,40 @@
+// ===== FÄRGSCHEMAN =====
+
+$theme: dark; 
+
+$dark-colors: (
+  bg: #242424,
+  text: rgba(255,255,255,0.87),
+  primary: #646cff
+);
+
+$light-colors: (
+  bg: #ffffff,
+  text: #213547,
+  primary: #747bff
+);
+
+// ===== FUNKTION FÖR ATT HÄMTA FÄRG =====
+
+@function theme-color($key) {
+  @if $theme == dark {
+    @return map-get($dark-colors, $key);
+  } @else {
+    @return map-get($light-colors, $key);
+  }
+}
+
+// ===== MIXINS =====
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+}

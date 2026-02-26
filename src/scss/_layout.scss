@@ -1,0 +1,92 @@
+@use 'base';
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: base.theme-color(bg);
+  color: base.theme-color(text);
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Hero-sektionen */
+.hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 90%;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Rubriker och text */
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SASS-sidan */
+.sass-page {
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-top: 3rem;  
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Responsiv hero-bild på små skärmar */
+@media (max-width: 768px) {
+  .hero img {
+    max-width: 90%; // större procent på små skärmar så den inte blir för liten
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
