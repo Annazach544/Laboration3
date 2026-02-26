@@ -82,7 +82,7 @@ p {
 /* Responsiv hero-bild på små skärmar */
 @media (max-width: 768px) {
   .hero img {
-    max-width: 90%; // större procent på små skärmar så den inte blir för liten
+    max-width: 90%;
   }
 
   .hero h1 {
